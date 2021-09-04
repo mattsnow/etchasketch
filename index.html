@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Etch-a-Sketch</title>
+  <meta charset="UTF-8" />
+
+</head>
+
+<body>
+
+  <style>
+
+    .container {
+      font-size: 40px;
+      min-height: 100vh;
+      width: 100%;
+      /* background: rgb(206, 213, 245); */
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      grid-template-rows: repeat(16, 1fr);
+      grid-gap: 5px;
+      grid-template-areas:
+        "play play play"
+        "l controls r"
+        "rock paper scissors";
+    }
+
+    .cell {
+      background: navy;
+    }
+
+  </style>
+
+  <div class="container" id="container">
+    
+  </div>
+
+</body>
+
+</html>
+
+<script src="scripts.js"></script>
