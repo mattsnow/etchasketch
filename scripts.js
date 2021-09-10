@@ -35,13 +35,16 @@ function generateGrid(size) {
 function addMouseListener() {
     document.querySelectorAll('.cell').forEach(item => {
         item.addEventListener('mouseenter', event => {
-            event.target.classList.remove('cell');
-            event.target.classList.add('shaded');;
+            while (event.target.classList == 'cell') {
 
-            if (tickBox.checked == true) {
-                event.target.style.backgroundColor = getRandomColour(colorArray);
+                event.target.classList.remove('cell');
+                event.target.classList.add('shaded');;
+
+                if (tickBox.checked == true) {
+                    event.target.style.backgroundColor = getRandomColour(colorArray);
+                }
+                
             }
-            
         })
     })
 }
